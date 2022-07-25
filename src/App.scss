@@ -1,0 +1,689 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+$main-color: #FFC266;
+$white: #FFF;
+$main-color2: #F39200;
+
+body {
+	font-family: 'Inter', sans-serif;
+	overflow-x: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	width: 100vw;
+}
+* {
+  box-sizing: border-box;
+}
+nav {
+	position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  padding: 0px 180px;
+  z-index: 110;
+}
+.navItems {
+  display: flex;
+  align-items: center;
+}
+.navTextItems {
+	display: flex;
+	margin-left: 150px;
+	gap: 75px;
+
+	a {
+		position: relative;
+		font-weight: 500;
+		font-size: 21px;
+		color: $white;
+		cursor: pointer;
+		text-decoration: none;
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 0%;
+			height: 2px;
+			background: $white;
+			left: 0;
+			bottom: -4px;
+			transition: width 0.5s;
+		}
+		&:hover::after {
+			width: 70%;
+		}
+	}
+}
+.contactButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $main-color;
+	box-shadow: 0px 0px 10px $main-color;
+	width: 250px;
+	height: 50px;
+	font-weight: 600;
+	font-size: 20px;
+	color: $white;
+	transform: skewX(-25deg);
+	border-radius: 5px;
+	border: 2px solid $main-color;
+	transition: background 0.5s;
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover {
+		background: transparent;
+
+		p {
+			color: $main-color;
+		}
+	}
+
+	p {
+		transform: skewX(25deg);
+		transition: color 0.5s;
+	}
+}
+.hamburgerMenu {
+
+	rect {
+		transition: transform 1s, opacity 1s;
+
+		&:nth-child(1) {
+			transform: translateY(0px) rotate(0deg);
+			transform-origin: center 0px;
+		}
+
+		&:nth-child(2) {
+			opacity: 1;
+			transform: opacity 0.5s;
+		}
+
+		&:nth-child(3) {
+			transform: translateY(0px) rotate(0deg);
+			transform-origin: center 23px;
+		}
+	}
+}
+.hamburgerMenuOpen {
+
+	rect {
+		fill: $main-color !important;
+
+		&:nth-child(1) {
+			transform: translateY(12px) rotate(45deg);
+			transform-origin: center 5px;
+		}
+
+		&:nth-child(2) {
+			opacity: 0;
+		}
+
+		&:nth-child(3) {
+			transform: translateY(-12px) rotate(-45deg);
+			transform-origin: center 23px;
+		}
+	}
+}
+.dropdown {
+	position: absolute;
+	width: 500px;
+	height: 100%;
+	background: #FFF;
+	box-shadow: -3px 0px 12px 5px rgba(0,0,0,0.05);
+	transition: right 0.5s;
+	z-index: 100;
+}
+.dropdownElements {
+	margin-top: 200px;
+}
+.dropdownElement {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 25px;
+	width: 100%;
+	height: 90px;
+	transition: background 0.5s;
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover {
+		background: $main-color;
+
+		p {
+			color: #FFF;
+		}
+	}
+
+	p {
+		color: rgb(95, 95, 95);
+		font-size: 30px;
+		font-weight: 700;
+		transition: color 0.5s;
+	}
+}
+.dropdownContactButton {
+	@extend .contactButton;
+	height: 65px;
+	font-size: 22px;
+}
+.dropdownContactButtonAlign {
+	display: flex;
+	justify-content: center;
+	margin-top: 75px;
+}
+.dropdownClosed {
+	right: -500px;
+}
+.dropdownOpen {
+	right: 0;
+}
+.homeDecoration {
+	position: absolute;
+	top: 0;
+	width: 1250px;
+	height: 950px;
+	background: linear-gradient(128.56deg, $main-color2 -5.48%, rgba(255, 194, 102, 0.76) 83.39%);
+	z-index: -1;
+	clip-path: polygon(0 0, 100% 0, 77% 91%, 0% 100%);
+}
+.decorationalSlant {
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	width: 1100px;
+}
+.decorationalCircle {
+	position: absolute;
+}
+.mainContentAlign {
+	padding: 200px 150px;
+
+	h1 {
+		font-weight: 700;
+		font-size: 50px;
+		color: $white;
+		max-width: 560px;
+	}
+
+	p {
+		margin-top: 50px;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 30px;
+		color: $white;
+		max-width: 625px;
+	}
+}
+.contactUsButtonHome {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 90px;
+	width: 235px;
+	height: 70px;
+	background: $white;
+	border-radius: 15px;
+	font-weight: 700;
+	font-size: 25px;
+	color: $main-color;
+	border: 2px solid $white;
+	transition: background 0.5s, color 0.5s;
+	cursor: pointer;
+	text-decoration: none;
+	
+	&:hover {
+		background: transparent;
+		color: $white;
+	}
+}
+.mainImagesAlign {
+	position: absolute;
+	top: 175px;
+	left: 900px;
+}
+.mainImage1 {
+	width: 325px;
+	height: 475px;
+	background: $white;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+	border-radius: 25px;
+}
+.mainImage2 {
+	position: absolute;
+	top: 180px;
+	left: 180px;
+	@extend .mainImage1;
+}
+.home {
+	height: 1100px;
+}
+.about {
+	position: relative;
+	margin-top: 100px;
+}
+.aboutAlignContent {
+	padding-left: 150px;
+	padding-right: 50px;
+
+	h1 {
+		font-weight: 500;
+		font-size: 50px;
+		line-height: 59px;
+		color: #4B4B4B;
+		margin-top: 20px;
+		max-width: 1000px;
+	}
+
+	a {
+		@extend .contactButton;
+		margin-top: 90px;
+		width: 280px;
+		height: 60px;
+		font-size: 25px;
+	}
+}
+.aboutMiniHeader {
+	font-weight: 500;
+	font-size: 25px;
+	color: $main-color;
+}
+.aboutDescription {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 0.1em;
+	color: #AFAFAF;
+	margin-top: 50px;
+	max-width: 900px;
+}
+.aboutDecorationalSlant {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 500px;
+	z-index: -1;
+}
+.culture {
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-top: 200px;
+}
+.cultureCards {
+	display: flex;
+	gap: 75px;
+}
+.cultureCard {
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	text-align: center;
+	padding: 0px 25px;
+	padding-top: 35px;
+	width: 300px;
+	height: 385px;
+	background: $white;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+	border-radius: 25px;
+}
+.cultureDecorationalBlob {
+	position: absolute;
+	bottom: -85px;
+	z-index: -1;
+}
+.cultureCardIconContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 75px;
+	height: 75px;
+	border-radius: 1000px;
+	background: $main-color;
+	box-shadow: 0px 0px 10px rgba(255, 194, 102, 0.76);
+
+	i {
+		font-size: 30px;
+		color: $white;
+	}
+}
+.cultureCardHeader {
+	margin-top: 25px;
+	font-weight: 500;
+	font-size: 30px;
+	color: #4B4B4B;
+}
+.cultureCardDescription {
+	position: absolute;
+	bottom: 80px;
+	font-weight: 500;
+	font-size: 17px;
+	color: #DDDDDD;
+	line-height: 20px;
+	padding: 0px 20px;
+}
+.joinUsButton {
+	@extend .contactButton;
+	width: 300px;
+	height: 65px;
+	font-size: 30px;
+}
+.joinUsButtonAlign {
+	display: flex;
+	justify-content: center;
+	margin-top: 175px;
+}
+footer {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 185px;
+	padding: 30px 200px;
+	background: $main-color;
+}
+.footerLogo {
+	width: 75px;
+}
+.footerNavElements {
+	display: flex;
+	align-items: center;
+	gap: 80px;
+}
+.footerNavElement {
+	position: relative;
+	height: max-content;
+	font-weight: 700;
+	font-size: 25px;
+	color: $white;
+	cursor: pointer;
+	text-decoration: none;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 0%;
+		height: 2px;
+		background: $white;
+		left: 0;
+		bottom: -4px;
+		transition: width 0.5s;
+	}
+	&:hover::after {
+		width: 70%;
+	}
+}
+.hamburgerMenuBlendMode {
+	mix-blend-mode: difference;
+}
+.hamburgerMenu {
+	display: none;
+	cursor: pointer;
+	
+	rect {
+		fill: $main-color;
+	}
+}
+@media screen and (max-width: 1600px) {
+	.aboutDecorationalSlant {
+		display: none;
+	}
+	.decorationalSlant {
+		width: 900px;
+	}
+	.mainImagesAlign {
+		left: 750px;
+	}
+	.mainContentAlign {
+		padding: 200px 100px;
+	}
+}
+@media screen and (max-width: 1350px) {
+	.decorationalSlant {
+		width: 850px;
+	}
+	nav {
+		padding: 0px 100px;
+	}
+	.mainContentAlign {
+		padding: 200px 75px;
+	}
+	.mainImagesAlign {
+		left: 725px;
+	}
+}
+@media screen and (max-width: 1250px) {
+	.navTextItems {
+		display: none;
+	}
+	.contactButton:not(.aboutAlignContent a):not(.joinUsButton):not(.dropdownContactButton) {
+		display: none;
+	}
+	.hamburgerMenu {
+		display: block;
+		
+		rect {
+			mix-blend-mode: darken;
+		}
+	}
+	.mainImagesAlign {
+		display: flex;
+		flex-flow: column;
+		width: 100%;
+		align-items: center;
+		position: static;
+		gap: 50px;
+		padding: 0px 25px;
+	}
+	.mainImage2 {
+		position: static;
+	}
+	.mainImage1, .mainImage2 {
+		width: 100%;
+		max-width: 500px;
+		height: 300px;
+	}
+	.home {
+		height: initial;
+	}
+	footer {
+		padding: 30px 100px;
+	}
+}
+@media screen and (max-width: 1100px) {
+	.cultureDecorationalBlob {
+		width: 1100px;
+	}
+	.cultureCards {
+		gap: 25px;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.joinUsButtonAlign {
+		margin-top: 100px;
+	}
+	.culture {
+		margin-top: 100px;
+	}
+	.cultureDecorationalBlob {
+		display: none;
+	}
+	.cultureCards {
+		flex-flow: column;
+	}
+	.cultureCard {
+		margin-top: 75px;
+	}
+	.cultureCard::after {
+		position: absolute;
+		margin-top: 38%;
+		content: "";
+		width: 100vw;
+		height: 100px;
+		background: $main-color;
+		z-index: -1;
+	}
+	.hamburgerMenu rect {
+		fill: $white;
+	}
+	.decorationalSlant {
+		width: 1250px;
+		top: -300px;
+	}
+	.mainImage1:not(.mainImage2) {
+		margin-top: 100px;
+	}
+	.mainContentAlign {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		text-align: center;
+	}
+	.contactUsButtonHome {
+		margin-top: 50px;
+	}
+}
+@media screen and (max-width: 850px) {
+	.aboutAlignContent {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		text-align: center;
+		padding: 0px 25px;
+	}
+}
+@media screen and (max-width: 800px) {
+	.footerNavElements {
+		gap: 35px;
+	}
+}
+@media screen and (max-width: 700px) {
+	.dropdown {
+		width: 100%;
+	}
+	.dropdownClosed {
+		right: -100%;
+	}
+}
+@media screen and (max-width: 600px) {
+	footer {
+		flex-flow: column;
+		align-items: center;
+	}
+	.footerNavElements {
+		margin-top: 25px;
+	}
+	.aboutAlignContent h1 {
+		font-size: 35px;
+		line-height: 45px;
+	}
+	.aboutDescription {
+		font-size: 15px;
+	}
+}
+@media screen and (max-width: 450px) {
+	.aboutAlignContent a {
+		width: 250px;
+		height: 50px;
+		font-size: 22px;
+		margin-top: 75px;
+	}
+	.mainContentAlign {
+		padding: 150px 25px;
+	}
+	nav {
+		padding: 0px 50px;
+	}
+	.mainContentAlign h1 {
+		font-size: 35px;
+	}
+	.mainImage1:not(.mainImage2) {
+		margin-top: 150px;
+	}
+	.footerNavElements {
+		gap: 25px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.joinUsButton {
+		width: 250px;
+		height: 55px;
+		font-size: 25px;
+	}
+	.aboutAlignContent h1 {
+		font-size: 30px;
+	}
+	.aboutDescription {
+		font-size: 13px;
+		line-height: 25px;
+	}
+	.aboutAlignContent {
+		padding: 0px 15px;
+	}
+}
+@media screen and (max-width: 350px) {
+	.cultureCard {
+		width: 250px;
+	}
+	.cultureCard:nth-child(2) .cultureCardDescription {
+		bottom: 60px;
+	}
+}
+@media screen and (max-width: 300px) {
+	.dropdownContactButton {
+		width: 250px !important;
+		height: 60px;
+	}
+}
