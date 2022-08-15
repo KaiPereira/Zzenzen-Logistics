@@ -12,7 +12,7 @@ export default function Nav(props) {
                         <a href="https://amazon-na.fountain.com/amazon-delivery-service-partner/apply/delivery-associate-zenzen-logistics-canada-incorporated-dmw1-zlci" target="_blank" rel="noreferrer">Portal</a>
                     </div>
                 </div>
-                <a href="mailto:zenzenlogistics@gmail.com" className="contactButton">
+                <a href="mailto:zenzenlogistics@gmail.com" className="contactButton" target="_blank" rel="noreferrer">
                     <p>Contact Us</p>
                 </a>
                 <svg width="35" height="30" viewBox="0 0 35 30" fill="none" xmlns="http://www.w3.org/2000/svg" className={props.dropdown ? "hamburgerMenu hamburgerMenuOpen" : "hamburgerMenu hamburgerMenuClosed"} onClick={props.changeDropdownState}>
@@ -33,7 +33,7 @@ export default function Nav(props) {
                         <p>Portal</p>
                     </a>
                     <a className="dropdownContactButtonAlign">
-                        <a href="mailto:zenzenlogistics@gmail.com" className="dropdownContactButton">
+                        <a href="mailto:zenzenlogistics@gmail.com" className="dropdownContactButton" target="_blank" rel="noreferrer">
                             <p>Contact Us</p>
                         </a>
                     </a>
