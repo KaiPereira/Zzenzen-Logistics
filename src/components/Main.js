@@ -54,7 +54,7 @@ export default function Main() {
                 <img src="/cultureDecorationalBlob.svg" className="cultureDecorationalBlob" alt="culture decorational blob" />
             </section>
             <div className="joinUsButtonAlign">
-                <a className="joinUsButton" href="mailto:zenzenlogistics@gmail.com">
+                <a className="joinUsButton" href="https://amazon-na.fountain.com/amazon-delivery-service-partner/apply/delivery-associate-zenzen-logistics-canada-incorporated-dmw1-zlci" target="_blank" rel="noreferrer">
                     <p>Join Us</p>
                 </a>
             </div>
