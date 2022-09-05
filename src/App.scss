@@ -260,7 +260,16 @@ nav {
 
 	p {
 		margin-top: 50px;
+		margin-bottom: 45px;
 		font-weight: 400;
+		font-size: 20px;
+		line-height: 30px;
+		color: $white;
+		max-width: 625px;
+	}
+
+	span {
+		font-weight: 700;
 		font-size: 20px;
 		line-height: 30px;
 		color: $white;
@@ -271,7 +280,7 @@ nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 90px;
+	margin-top: 20px;
 	width: 235px;
 	height: 70px;
 	background: $white;
@@ -310,7 +319,7 @@ nav {
 	top: 180px;
 	left: 180px;
 	@extend .mainImage1;
-	background: url("../public/historicalMuseum.jpg");
+	background: url("../public/VictoriaPicture.jpg");
 	background-size: cover;
 	background-position: 500px;
 }
@@ -600,9 +609,6 @@ footer {
 		flex-flow: column;
 		align-items: center;
 		text-align: center;
-	}
-	.contactUsButtonHome {
-		margin-top: 50px;
 	}
 }
 @media screen and (max-width: 850px) {

@@ -9,6 +9,7 @@ export default function Main() {
                 <div className="mainContentAlign">
                     <h1>Your Last Mile Delivery Service For Growth</h1>
                     <p>Our customers are our number one priority and we reverse engineer from that standpoint to ensure that we exceed your last mile delivery expectations.</p>
+                    <span>We Are Hiring!</span>
                     <a className="contactUsButtonHome" href="mailto:zenzenlogistics@gmail.com" target="_blank" rel="noreferrer">Contact Us</a>
                 </div>
                 <div className="mainImagesAlign">
@@ -20,7 +21,7 @@ export default function Main() {
                 <div className="aboutAlignContent">
                     <p className="aboutMiniHeader">About Us</p>
                     <h1>Working With the Most Customer Obsessed Company in the World Has It’s Benefits</h1>
-                    <p className="aboutDescription">Zzenzen Logistics was founded in 2021 with the sole objective to be a national leader in the last mile delivery industry. Our goal is to serve the city of Winnipeg with the highest quality of customer care and safety possible. At Zzenzen Logistics, our motto is "Details Matter". Within our company we promote the ideals of accountability and service. </p>
+                    <p className="aboutDescription">Zzenzen Logistics was founded in 2021 with the sole objective to be a national leader in the last mile delivery industry. Our goal is to serve the residents of Greater Victoria with the highest quality of customer care and safety possible. At Zzenzen Logistics, our motto is "Details Matter". Within our company we promote the ideals of accountability and service. </p>
                     <a href="mailto:zenzenlogistics@gmail.com" target="_blank" rel="noreferrer">
                         <p>Contact Us</p>
                     </a>
@@ -54,7 +55,7 @@ export default function Main() {
                 <img src="/cultureDecorationalBlob.svg" className="cultureDecorationalBlob" alt="culture decorational blob" />
             </section>
             <div className="joinUsButtonAlign">
-                <a className="joinUsButton" href="https://amazon-na.fountain.com/amazon-delivery-service-partner/apply/delivery-associate-zenzen-logistics-canada-incorporated-dmw1-zlci" target="_blank" rel="noreferrer">
+                <a className="joinUsButton" href="https://amazon-na.fountain.com/amazon-delivery-service-partner/apply/delivery-associate-zenzen-logistics-canada-inc-dvv2-zlci" target="_blank" rel="noreferrer">
                     <p>Join Us</p>
                 </a>
             </div>

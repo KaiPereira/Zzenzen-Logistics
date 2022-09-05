@@ -9,7 +9,7 @@ export default function Nav(props) {
                     <div className="navTextItems">
                         <a href="#home">Home</a>
                         <a href="#about">About</a>
-                        <a href="https://amazon-na.fountain.com/amazon-delivery-service-partner/apply/delivery-associate-zenzen-logistics-canada-incorporated-dmw1-zlci" target="_blank" rel="noreferrer">Portal</a>
+                        <a href="https://amazon-na.fountain.com/amazon-delivery-service-partner/apply/delivery-associate-zenzen-logistics-canada-inc-dvv2-zlci" target="_blank" rel="noreferrer">Apply Now</a>
                     </div>
                 </div>
                 <a href="mailto:zenzenlogistics@gmail.com" className="contactButton" target="_blank" rel="noreferrer">
@@ -29,8 +29,8 @@ export default function Nav(props) {
                     <a href="#about" className="dropdownElement" onClick={props.changeDropdownState}>
                         <p>About</p>
                     </a>
-                    <a href="https://amazon-na.fountain.com/amazon-delivery-service-partner/apply/delivery-associate-zenzen-logistics-canada-incorporated-dmw1-zlci" target="_blank" rel="noreferrer" className="dropdownElement">
-                        <p>Portal</p>
+                    <a href="https://amazon-na.fountain.com/amazon-delivery-service-partner/apply/delivery-associate-zenzen-logistics-canada-inc-dvv2-zlci" target="_blank" rel="noreferrer" className="dropdownElement">
+                        <p>Apply Now</p>
                     </a>
                     <a className="dropdownContactButtonAlign">
                         <a href="mailto:zenzenlogistics@gmail.com" className="dropdownContactButton" target="_blank" rel="noreferrer">
