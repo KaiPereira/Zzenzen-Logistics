@@ -648,6 +648,12 @@ footer {
 	.aboutDescription {
 		font-size: 15px;
 	}
+	footer {
+		padding: 30px 20px;
+	}
+	.footerNavElement {
+		font-size: 17px;
+	}
 }
 @media screen and (max-width: 450px) {
 	.aboutAlignContent a {
