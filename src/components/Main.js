@@ -21,7 +21,7 @@ export default function Main() {
                 <div className="aboutAlignContent">
                     <p className="aboutMiniHeader">About Us</p>
                     <h1>Working With the Most Customer Obsessed Company in the World Has It’s Benefits</h1>
-                    <p className="aboutDescription">Zzenzen Logistics was founded in 2021 with the sole objective to be a national leader in the last mile delivery industry. Our goal is to serve the residents of Greater Victoria with the highest quality of customer care and safety possible. At Zzenzen Logistics, our motto is "Details Matter". Within our company we promote the ideals of accountability and service. </p>
+                    <p className="aboutDescription">Zzenzen Logistics Canada Logistics Canada was founded in 2021 with the sole objective to be a national leader in the Last Mile delivery industry. Our goal is to serve the residents of Greater Victoria with the highest quality of customer care and safety possible. At Zzenzen Logistics, our motto is "Details Matter". Within our company we promote the ideals of accountability and service. </p>
                     <a href="mailto:zenzenlogistics@gmail.com" target="_blank" rel="noreferrer">
                         <p>Contact Us</p>
                     </a>
