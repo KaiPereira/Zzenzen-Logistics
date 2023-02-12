@@ -258,7 +258,7 @@ nav {
 		max-width: 560px;
 	}
 
-	p {
+	.main-description {
 		margin-top: 50px;
 		margin-bottom: 45px;
 		font-weight: 400;
@@ -268,12 +268,19 @@ nav {
 		max-width: 625px;
 	}
 
-	span {
-		font-weight: 700;
-		font-size: 20px;
-		line-height: 30px;
-		color: $white;
-		max-width: 625px;
+	div {
+		p {
+			font-weight: 700;
+			font-size: 32px;
+			line-height: 30px;
+			color: $white;
+			max-width: 625px;
+		}
+
+		p:nth-child(2) {
+			font-size: 17px;
+			font-weight: 600;
+		}
 	}
 }
 .contactUsButtonHome {
@@ -655,7 +662,7 @@ footer {
 		font-size: 17px;
 	}
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
 	.aboutAlignContent a {
 		width: 250px;
 		height: 50px;
@@ -663,7 +670,7 @@ footer {
 		margin-top: 75px;
 	}
 	.mainContentAlign {
-		padding: 150px 25px;
+		padding: 200px 25px;
 	}
 	nav {
 		padding: 0px 50px;

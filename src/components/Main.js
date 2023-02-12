@@ -8,8 +8,11 @@ export default function Main() {
                 <img src="/decorationalCircle.svg" alt="decorational circle graphic" className="decorationalCircle" />
                 <div className="mainContentAlign">
                     <h1>Your Last Mile Delivery Service For Growth</h1>
-                    <p>Our customers are our number one priority and we reverse engineer from that standpoint to ensure that we exceed your last mile delivery expectations.</p>
-                    <span>We Are Hiring!</span>
+                    <p className="main-description">Our customers are our number one priority and we reverse engineer from that standpoint to ensure that we exceed your last mile delivery expectations.</p>
+                    <div>
+                        <p>$600 Signing Bonus</p>
+                        <p>Limited time, conditions apply.</p>
+                    </div>
                     <a className="contactUsButtonHome" href="mailto:zenzenlogistics@gmail.com" target="_blank" rel="noreferrer">Contact Us</a>
                 </div>
                 <div className="mainImagesAlign">
