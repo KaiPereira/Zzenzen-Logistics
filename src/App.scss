@@ -52,6 +52,7 @@ body {
 	font-family: 'Inter', sans-serif;
 	overflow-x: hidden;
 	width: 100vw;
+	overflow-x: hidden;
 	height: 100vh;
 }
 html {
@@ -253,7 +254,8 @@ nav {
 
 	h1 {
 		font-weight: 700;
-		font-size: 50px;
+		font-size: 45px;
+		line-height: 55px;
 		color: $white;
 		max-width: 560px;
 	}
@@ -499,6 +501,25 @@ footer {
 		fill: $main-color;
 	}
 }
+.gallery-align {
+	display: flex;
+	justify-content: center;
+	margin-top: 150px;
+}
+.gallery {
+	display: flex;
+	justify-content: space-around;
+	max-width: 1200px;
+	flex-wrap: wrap;
+	gap: 25px;
+
+	img {
+		width: 300px;
+		height: 300px;
+		border-radius: 25px;
+		object-fit: cover;
+	}
+}
 @media screen and (max-width: 1600px) {
 	.aboutDecorationalSlant {
 		display: none;
@@ -510,7 +531,7 @@ footer {
 		left: 750px;
 	}
 	.mainContentAlign {
-		padding: 200px 100px;
+		padding: 180px 100px;
 	}
 }
 @media screen and (max-width: 1350px) {
@@ -521,7 +542,7 @@ footer {
 		padding: 0px 100px;
 	}
 	.mainContentAlign {
-		padding: 200px 75px;
+		padding: 160px 75px;
 	}
 	.mainImagesAlign {
 		left: 725px;
@@ -670,19 +691,24 @@ footer {
 		margin-top: 75px;
 	}
 	.mainContentAlign {
-		padding: 200px 25px;
+		padding: 150px 25px;
 	}
 	nav {
 		padding: 0px 50px;
 	}
 	.mainContentAlign h1 {
-		font-size: 35px;
+		font-size: 32px;
+		line-height: 45px;
 	}
 	.mainImage1:not(.mainImage2) {
 		margin-top: 150px;
 	}
 	.footerNavElements {
 		gap: 25px;
+	}
+	.mainContentAlign .main-description {
+		font-size: 16px;
+		line-height: 26px;
 	}
 }
 @media screen and (max-width: 400px) {
@@ -703,6 +729,13 @@ footer {
 	}
 	.mainImage1 {
 		background-position: 325px;
+	}
+	.main-description {
+		margin-top: 35px !important;
+		margin-bottom: 30px !important;
+	}
+	.mainContentAlign {
+		padding: 135px 25px;
 	}
 }
 @media screen and (max-width: 350px) {
